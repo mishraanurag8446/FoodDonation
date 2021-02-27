@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Food Donate</string>
+    <string-array name="Title">
+        <item>Hariom</item>
+        <item>Shivam</item>
+        <item>Raj</item>
+        <item>Ram</item>
+        <item>Ram</item>
+        <item>Karan</item>
+    </string-array>
+    <string-array name="discretion">
+        <item>D/5 GM nagar narangi by pass near gm gardan virar east </item>
+        <item>D/5 GM nagar narangi by pass near gm gardan virar east </item>
+        <item>D/5 GM nagar narangi by pass near gm gardan virar east </item>
+        <item>D/5 GM nagar narangi by pass near gm gardan virar east </item>
+        <item>D/5 GM nagar narangi by pass near gm gardan virar east </item>
+        <item>D/5 GM nagar narangi by pass near gm gardan virar east </item>
+    </string-array>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
