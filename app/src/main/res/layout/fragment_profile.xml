@@ -4,40 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activities.ViewDonnerDetails" >
-
-    <include
-        android:id="@+id/include"
-        layout="@layout/activites_toolbar"/>
+    android:paddingBottom="16dp"
+    tools:context=".fragments.ProfilePage">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card"
-        android:layout_width="0dp"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="12dp"
+        android:layout_margin="16dp"
+        android:padding="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:layout_constraintCircleRadius="60dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="180dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/frame"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
                 app:cardCornerRadius="60dp"
+                app:cardElevation="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -47,38 +40,40 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/profile"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:src="@drawable/profile" />
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/txtName"
+                android:id="@+id/Userna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:text="Name"
-                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Name of the User"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/frame" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:elevation="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:paddingBottom="24dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card">
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,6 +88,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
+            android:layout_marginBottom="24dp"
             android:baselineAligned="true">
 
             <TableRow
@@ -144,7 +140,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvDPMobileNo"
+                    android:id="@+id/tvPMobileNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -161,7 +157,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/tvTitleDPEmail"
+                    android:id="@+id/tvTitlePEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -172,7 +168,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvDPEmail"
+                    android:id="@+id/tvPEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -182,24 +178,25 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="123dp"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/tvTitleDPDonationMade"
+                    android:id="@+id/tvTitlePAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:padding="10dp"
-                    android:text="No of donation \nmade"
+                    android:text="Address"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvDPDonationMade"
+                    android:id="@+id/tvPAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -211,7 +208,5 @@
             </TableRow>
         </TableLayout>
     </androidx.cardview.widget.CardView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
